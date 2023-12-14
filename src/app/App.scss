@@ -55,6 +55,19 @@
             max-width: toRem(480);
             padding: toRem(15) 0;
         }
+
+        &__cards-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(45);
+            margin: toRem(30) 0;
+
+            &--desktop {
+                flex-direction: row;
+                gap: toRem(35);
+                margin: toRem(45) 0;
+            }
+        }
     }
 
     &__footer {

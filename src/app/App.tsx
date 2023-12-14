@@ -5,8 +5,10 @@ import Intro from '../components/intro/Intro';
 import NavigationMobile from '../components/navigation/navigation-mobile/NavigationMobile';
 import NavigationDesktop from '../components/navigation/navigation-desktop/NavigationDesktop';
 import ilustrationHero from '../assets/ilustration/illustration-hero.svg';
+import Card from '../components/card/Card';
 
 import './App.scss';
+import { CardData } from '../components/card/CardData';
 
 export default function App() {
     return (
@@ -39,6 +41,22 @@ export default function App() {
                     We've got more browsers in the pipeline.
                     Please do let us know if you've got a favourite you'd like us to prioritize.    
                 </p>
+                <div className={classNames({
+                    'bookmark-app__section__cards-wrapper': true,
+                    'bookmark-app__section__cards-wrapper--desktop': isDesktop,
+                })}>
+                    { CardData.map((card, index) => {
+                        return (
+                            <Card
+                                key={index}
+                                image={card.image}
+                                title={card.title}
+                                subtitle={card.subtitle}
+                                margin={card.margin}
+                            />
+                        )
+                    })}
+                </div>
             </section>
             <section className='bookmark-app__section'>
                 <h2 className='bookmark-app__section__title'>Frequently Asked Questions</h2>

@@ -13,6 +13,7 @@ const Button: React.FC<ButtonProps> = ({type, children}) => {
             'button--grey': type === 'grey',
             'button--red': type === 'red',
             'button--white': type === 'white',
+            'button--full-width': type === 'full-width',
         })}>
             {children}
         </button>

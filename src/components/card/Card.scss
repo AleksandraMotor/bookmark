@@ -1,0 +1,41 @@
+@import "../../scss/mixins/variables.scss";
+@import "../../scss/functions/px-to-rem.scss";
+
+.card {
+    width: toRem(280);
+    height: toRem(360);
+    box-shadow: 0px 4px 8px 0px $neutral_grey;
+    border-radius: toRem(12);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    &--m-1 {
+        margin-top: toRem(45);
+    }
+
+    &--m-2 {
+        margin-top: toRem(90);
+    }
+
+    &__image {
+        margin: toRem(30) 0;
+        max-height: toRem(100);
+    }
+
+    &__title {
+        font-size: toRem(20);
+        font-weight: 500;
+    }
+
+    &__subtitle {
+        font-size: toRem(14);
+        color: $neutral_grey;
+        padding: toRem(10) 0;
+        margin-bottom: toRem(25);
+    }
+
+    &__cta {
+        padding: toRem(25);
+    }
+}
