@@ -1,0 +1,29 @@
+@import "../../../scss/mixins/variables.scss";
+@import "../../../scss/functions/px-to-rem.scss";
+
+.navigation-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(40);
+    width: 100%;
+    max-width: toRem(1200);
+    text-transform: uppercase;
+    padding: toRem(45);
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: toRem(40);
+
+        &__item {
+            font-size: toRem(14);
+            letter-spacing: toRem(1.5);
+            cursor: pointer;
+
+            &:hover, &:focus {
+                color: $main_red;
+            }
+        }
+    }
+}

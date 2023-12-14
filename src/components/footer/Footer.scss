@@ -1,0 +1,58 @@
+@import "../../scss/mixins/variables.scss";
+@import "../../scss/functions/px-to-rem.scss";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(45);
+    width: 100%;
+    max-width: toRem(1200);
+    font-size: toRem(16);
+    line-height: 1.2;
+    letter-spacing: toRem(1.5);
+    text-transform: uppercase;
+    padding: toRem(40) 0;
+
+    &--desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: toRem(14);
+        padding: toRem(30) toRem(40);
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(30);
+
+        &--desktop {
+            flex-direction: row;
+            gap: toRem(40);
+        }
+
+        &--social-media {
+            flex-direction: row;
+            gap: toRem(45);
+        }
+
+        &__item {
+            color: white;
+            cursor: pointer;
+
+            &--logo {
+                margin-bottom: toRem(5);
+            }
+
+            &--desktop {
+                margin-bottom: 0;
+                margin-right: toRem(25);
+            }
+
+            &:hover, &:focus {
+                color: $main_red;
+            }
+        }
+    }
+}

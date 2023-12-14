@@ -1,0 +1,59 @@
+@import "../../scss/mixins/variables.scss";
+@import "../../scss/functions/px-to-rem.scss";
+
+.button {
+    font-size: toRem(14);
+    letter-spacing: toRem(0.8);
+    font-weight: 500;
+    text-wrap: nowrap;
+    min-width: toRem(120);
+    color: white;
+    background-color: $main_blue;    
+    border-radius: toRem(6);
+    border: toRem(2) solid;
+    border-color: $main_blue;
+    box-shadow: 0px 4px 8px 0px $neutral_grey;
+    padding: toRem(12) toRem(12);
+    cursor: pointer;
+    
+    &:hover, &:focus {
+        color: $main_blue;
+        background-color: white;
+    }
+
+    &--red {
+        background-color: $main_red;
+        border-color: $main_red;
+
+        &:hover, &:focus {
+            color: $main_red;
+            background-color: white;
+        }
+    }
+
+    &--grey {
+        background-color: $light_grey;
+        border-color: transparent;
+        color: $dark_blue;
+
+        &:hover, &:focus {    
+            color: $dark_blue;
+            background-color: white;
+            border-color: $dark_blue;
+        }
+    }
+
+    &--white {
+        width: 100%;
+        font-size: toRem(18);
+        letter-spacing: toRem(2);
+        background-color: transparent;
+        border-color: white;
+        box-shadow: none;
+
+        &:hover, &:focus {    
+            color: $dark_blue;
+        }
+    }
+    
+}
