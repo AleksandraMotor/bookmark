@@ -6,9 +6,10 @@ import NavigationMobile from '../components/navigation/navigation-mobile/Navigat
 import NavigationDesktop from '../components/navigation/navigation-desktop/NavigationDesktop';
 import ilustrationHero from '../assets/ilustration/illustration-hero.svg';
 import Card from '../components/card/Card';
+import { CardData } from '../components/card/CardData';
+import Newsletter from '../components/newsletter/Newsletter';
 
 import './App.scss';
-import { CardData } from '../components/card/CardData';
 
 export default function App() {
     return (
@@ -66,6 +67,7 @@ export default function App() {
                 </p>
             </section>
             <footer className='bookmark-app__footer'>
+                <Newsletter/>
                 <Footer/>
             </footer>
         </div>

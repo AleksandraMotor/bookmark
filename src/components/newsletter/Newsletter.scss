@@ -1,0 +1,125 @@
+@import "../../scss/mixins/variables.scss";
+@import "../../scss/functions/px-to-rem.scss";
+@import "../../scss/mixins/breakpoints.scss";
+
+.newsletter {
+    width: 100%;
+    background-color: $main_blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: toRem(70) toRem(30) toRem(30) toRem(30);
+
+    @include breakpoint-above(md) {
+        padding: toRem(60) toRem(30) toRem(50) toRem(30);
+    }
+
+    &__counter {
+        font-size: toRem(12);
+        letter-spacing: toRem(5);
+        text-transform: uppercase;
+        font-weight: 500;
+
+        @include breakpoint-above(md) {
+            margin: toRem(10) 0;
+        }
+    }
+
+    &__text {
+        font-size: toRem(24);
+        margin: toRem(15) 0;
+        font-weight: 500;
+
+        @include breakpoint-above(md) {
+            font-size: toRem(30);
+            max-width: toRem(400);
+            margin: toRem(25) 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(15);
+        width: 100%;
+        margin: toRem(20) 0;
+
+        @include breakpoint-above(md) {
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+        }
+
+        &__email {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: toRem(14);
+            text-align: left;
+            color: white;
+            background-color: $main_red;
+            border-radius: toRem(6);
+            border: none;
+            position: relative;
+            
+            @include breakpoint-above(md) {
+                max-width: toRem(300);
+            }
+
+            &__input {
+                width: 100%;
+                height: 100%;
+                border-radius: toRem(6);
+                border: toRem(2) solid white;
+                padding: toRem(15);
+
+                &::placeholder {
+                    color: $neutral_grey;
+                }
+
+                &--error {
+                    border: toRem(2) solid $main_red;
+                    border-radius: toRem(4);
+                }
+            }
+
+            &__error-icon {
+                position: absolute;
+                top: toRem(13);
+                right: toRem(13);
+            }
+
+            &__error-message {
+                font-size: toRem(10);
+                letter-spacing: toRem(0.5);
+                font-style: italic;
+                font-weight: 500;
+                color: white;
+                padding: toRem(5) toRem(10);
+            }
+        }
+
+        &__submit {
+            background-color: $main_red;
+            color: white;
+            font-size: toRem(14);
+            letter-spacing: toRem(0.8);
+            font-weight: 500;
+            border-radius: toRem(6);
+            border: toRem(2) solid $main_red;
+            width: 100%;
+            padding: toRem(15); 
+
+            @include breakpoint-above(md) {
+               max-width: toRem(130); 
+            }
+
+            &:hover, &:focus {
+                background-color: white;
+                color: $main_red;
+            }
+        }
+    }
+}
