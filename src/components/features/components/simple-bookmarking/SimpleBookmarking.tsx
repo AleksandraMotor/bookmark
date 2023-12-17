@@ -7,7 +7,9 @@ import './SimpleBookmarking.scss';
 const SimpleBookmarking: React.FC = () => {
     return (
         <div className='feature-1'>
-            <img className='feature-1__image' src={ilustration} alt="illustration-features-tab-1" />
+            <div className='feature-1__image'>
+                <img src={ilustration} alt="illustration-features-tab-1"/>
+            </div>
             <div className='feature-1__info'>
                 <h2 className='feature-1__info__title'>Bookmark in one click</h2>
                 <p className='feature-1__info__text'>

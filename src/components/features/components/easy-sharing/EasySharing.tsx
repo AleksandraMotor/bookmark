@@ -7,7 +7,9 @@ import './EasySharing.scss';
 const EasySharing: React.FC = () => {
     return (
         <div className='feature-3'>
-            <img className='feature-3__image' src={ilustration} alt="illustration-features-tab-3" />
+            <div className='feature-3__image'>
+                <img src={ilustration} alt="illustration-features-tab-3"/>
+            </div>            
             <div className='feature-3__info'>
                 <h2 className='feature-3__info__title'>Share your bookmarks</h2>
                 <p className='feature-3__info__text'>

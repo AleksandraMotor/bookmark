@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { isDesktop } from 'react-device-detect';
 import classNames from 'classnames';
 import Footer from '../components/footer/Footer';
@@ -27,9 +27,9 @@ export default function App() {
         setOpen(true);
     };
 
-    window.onload = () => {
-        setTimeout(handleOpen, 30000);
-    };
+    // window.onload = () => {
+    //     setTimeout(handleOpen, 30000);
+    // };
 
     return (
         <div className='bookmark-app'>
@@ -50,12 +50,14 @@ export default function App() {
                 )}
             </header>
             <section className='bookmark-app__intro'>
-                <img
-                    onMouseOver={handleOpen}
-                    className='bookmark-app__intro__image'
-                    src={ilustrationHero}
-                    alt="Ilustration Hero"
-                />
+                <div className='bookmark-app__intro__image'>
+                    <img
+                        // onMouseOver={handleOpen}
+                        
+                        src={ilustrationHero}
+                        alt="Ilustration Hero"
+                    />
+                </div>
                 <Intro/>
             </section>
             <section className='bookmark-app__section'>

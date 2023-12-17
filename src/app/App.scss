@@ -11,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 
     &__modal-wrapper {
         position: fixed;
@@ -51,10 +52,73 @@
         }
 
         &__image {
-            max-width: toRem(350);
+            width: toRem(350);
+            height: toRem(250);
+            min-width: toRem(350);
+            min-height: toRem(250);
+            position: relative;
 
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                border-radius: 50%;
+                bottom: toRem(-10);
+                left: toRem(80);
+                width: toRem(200);
+                height: toRem(200);
+                background-color: $main_blue;
+                z-index: -5;
+            }
+            
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: toRem(-10);
+                left: toRem(180);
+                width: toRem(1800);
+                height: toRem(200);
+                background-color: $main_blue;
+                z-index: -5;
+            }
+  
             @include breakpoint-above(sm) {
-                max-width: toRem(700);
+                width: toRem(650);
+                height: toRem(480);
+                min-width: toRem(650);
+                min-height: toRem(480);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    border-radius: 50%;
+                    bottom: toRem(-20);
+                    left: toRem(200);
+                    width: toRem(350);
+                    height: toRem(350);
+                    background-color: $main_blue;
+                    z-index: -5;
+                }
+                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    bottom: toRem(-20);
+                    left: toRem(375);
+                    width: toRem(1800);
+                    height: toRem(350);
+                    background-color: $main_blue;
+                    z-index: -5;
+                }
             }
         }
     }

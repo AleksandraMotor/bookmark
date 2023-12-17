@@ -7,7 +7,9 @@ import './SpeedySearching.scss';
 const SpeedySearching: React.FC = () => {
     return (
         <div className='feature-2'>
-            <img className='feature-2__image' src={ilustration} alt="illustration-features-tab-2" />
+            <div className='feature-2__image'>
+                <img src={ilustration} alt="illustration-features-tab-2"/>
+            </div>            
             <div className='feature-2__info'>
                 <h2 className='feature-2__info__title'>Intelligent searching</h2>
                 <p className='feature-2__info__text'>
