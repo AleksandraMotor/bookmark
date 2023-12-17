@@ -1,0 +1,10 @@
+@import "../../scss/mixins/variables.scss";
+@import "../../scss/functions/px-to-rem.scss";
+
+.modal {
+    background-color: white;
+    border-radius: toRem(8);
+    border: toRem(3) solid $main_blue;
+    padding: toRem(20);
+    margin: toRem(20);
+}

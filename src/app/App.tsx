@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { isDesktop } from 'react-device-detect';
 import classNames from 'classnames';
 import Footer from '../components/footer/Footer';
@@ -9,14 +10,37 @@ import Card from '../components/card/Card';
 import { CardData } from '../components/card/CardData';
 import Newsletter from '../components/newsletter/Newsletter';
 import Accordion from '../components/accordion/Accordion';
-
-import './App.scss';
 import Button from '../components/button/Button';
 import Features from '../components/features/Features';
+import Modal from '../components/modal/Modal';
+
+import './App.scss';
 
 export default function App() {
+    const [open, setOpen] = useState(false);
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    window.onload = () => {
+        setTimeout(handleOpen, 30000);
+    };
+
     return (
         <div className='bookmark-app'>
+            {open && (
+                <div
+                    onClick={handleClose}
+                    className='bookmark-app__modal-wrapper'
+                >
+                    <Modal/>
+                </div>
+            )}
             <header className='bookmark-app__header'>
                 {!isDesktop && (
                     <NavigationMobile/>
@@ -26,7 +50,11 @@ export default function App() {
                 )}
             </header>
             <section className='bookmark-app__intro'>
-                <img className='bookmark-app__intro__image' src={ilustrationHero} alt="Ilustration Hero" />
+                <img
+                    onMouseOver={handleOpen}
+                    className='bookmark-app__intro__image'
+                    src={ilustrationHero}
+                    alt="Ilustration Hero" />
                 <Intro/>
             </section>
             <section className='bookmark-app__section'>
@@ -76,6 +104,5 @@ export default function App() {
                 <Footer/>
             </footer>
         </div>
-        
     );
 };
