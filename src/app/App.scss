@@ -1,6 +1,7 @@
 @import "../scss/mixins/reset.scss";
 @import "../scss/mixins/variables.scss";
 @import "../scss/functions/px-to-rem.scss";
+@import "../scss/mixins/breakpoints.scss";
 
 .bookmark-app {
     font-size: toRem(18);
@@ -20,17 +21,26 @@
     &__intro {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
         max-width: toRem(1330);
         padding: 0 toRem(12);
         margin: toRem(35) 0;
         
-        &--desktop {
+        @include breakpoint-above(md) {
             flex-direction: row-reverse;
             align-items: center;
             justify-content: space-between;
             padding: 0;
             margin: toRem(55) 0;
+        }
+
+        &__image {
+            max-width: toRem(350);
+
+            @include breakpoint-above(sm) {
+                max-width: toRem(700);
+            }
         }
     }
 
@@ -43,29 +53,52 @@
         padding: 0 toRem(20);
         margin: toRem(40) 0;
 
+        @include breakpoint-above(md) {
+            margin: toRem(60) 0;
+        }
+
         &__title {
-            font-size: toRem(26);
+            font-size: toRem(24);
             font-weight: 500;
+            max-width: toRem(300);
+
+            @include breakpoint-above(md) {
+                font-size: toRem(30);
+                max-width: toRem(500);
+            }
         }
 
         &__text {
-            font-size: toRem(16);
-            line-height: 1.5;
+            font-size: toRem(15);
+            line-height: 1.7;
             color: $neutral_grey;
-            max-width: toRem(480);
+            max-width: toRem(300);
             padding: toRem(15) 0;
+
+            @include breakpoint-above(md) {
+                font-size: toRem(18);
+                line-height: 1.5;
+                max-width: toRem(550);
+                padding: toRem(25) 0;
+            }
+        }
+
+        &__button {
+            margin-top: toRem(50);
+            margin-bottom: toRem(85);
         }
 
         &__cards-wrapper {
             display: flex;
             flex-direction: column;
             gap: toRem(45);
-            margin: toRem(30) 0;
+            margin-top: toRem(30);
+            margin-bottom: toRem(60);
 
-            &--desktop {
+            @include breakpoint-above(md) {
                 flex-direction: row;
                 gap: toRem(35);
-                margin: toRem(45) 0;
+                margin: toRem(35) 0;
             }
         }
     }
@@ -77,5 +110,4 @@
         flex-direction: column;
         align-items: center;
     }
-
 }

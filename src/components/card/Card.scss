@@ -1,5 +1,6 @@
 @import "../../scss/mixins/variables.scss";
 @import "../../scss/functions/px-to-rem.scss";
+@import "../../scss/mixins/breakpoints.scss";
 
 .card {
     width: toRem(280);
@@ -11,11 +12,15 @@
     justify-content: end;
 
     &--m-1 {
-        margin-top: toRem(45);
+        @include breakpoint-above(md) {
+            margin-top: toRem(40);
+        }
     }
 
     &--m-2 {
-        margin-top: toRem(90);
+        @include breakpoint-above(md) {
+           margin-top: toRem(80); 
+        }
     }
 
     &__image {

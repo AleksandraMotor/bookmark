@@ -12,7 +12,7 @@
     text-align: center;
     padding: toRem(70) toRem(30) toRem(30) toRem(30);
 
-    @include breakpoint-above(md) {
+    @include breakpoint-above(sm) {
         padding: toRem(60) toRem(30) toRem(50) toRem(30);
     }
 
@@ -22,7 +22,7 @@
         text-transform: uppercase;
         font-weight: 500;
 
-        @include breakpoint-above(md) {
+        @include breakpoint-above(sm) {
             margin: toRem(10) 0;
         }
     }
@@ -32,7 +32,7 @@
         margin: toRem(15) 0;
         font-weight: 500;
 
-        @include breakpoint-above(md) {
+        @include breakpoint-above(sm) {
             font-size: toRem(30);
             max-width: toRem(400);
             margin: toRem(25) 0;
@@ -46,7 +46,7 @@
         width: 100%;
         margin: toRem(20) 0;
 
-        @include breakpoint-above(md) {
+        @include breakpoint-above(sm) {
             flex-direction: row;
             align-items: start;
             justify-content: center;
@@ -64,7 +64,7 @@
             border: none;
             position: relative;
             
-            @include breakpoint-above(md) {
+            @include breakpoint-above(sm) {
                 max-width: toRem(300);
             }
 
@@ -112,7 +112,7 @@
             width: 100%;
             padding: toRem(15); 
 
-            @include breakpoint-above(md) {
+            @include breakpoint-above(sm) {
                max-width: toRem(130); 
             }
 

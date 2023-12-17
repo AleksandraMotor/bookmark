@@ -1,5 +1,6 @@
 @import "../../scss/mixins/variables.scss";
 @import "../../scss/functions/px-to-rem.scss";
+@import "../../scss/mixins/breakpoints.scss";
 
 .intro {
     display: flex;
@@ -11,11 +12,11 @@
     max-width: toRem(320);
     margin: toRem(60) 0;
 
-    &--desktop {
+    @include breakpoint-above(md) {
         text-align: left;
         align-items: flex-start;
         max-width: toRem(580);
-        padding-left: toRem(100);
+        padding-left: toRem(110);
     }
 
     &__title {
@@ -24,7 +25,7 @@
         font-weight: 500;
         color: $dark_blue;
 
-        &--desktop {
+        @include breakpoint-above(md) {
             font-size: toRem(48);
             line-height: 1.1;
         }
@@ -32,11 +33,11 @@
 
     &__text {
         color: $neutral_grey;
-        font-size: toRem(16);
+        font-size: toRem(15);
         line-height: 1.5;
-        padding: toRem(20) 0;
+        padding: toRem(20) toRem(10);
 
-        &--desktop {
+        @include breakpoint-above(md) {
             font-size: toRem(18);
             padding: toRem(22) 0;
         }

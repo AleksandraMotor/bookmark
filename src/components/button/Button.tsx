@@ -3,7 +3,7 @@ import './Button.scss';
 
 interface ButtonProps {
     type?: string;
-    children: string
+    children: string;
 }
 
 const Button: React.FC<ButtonProps> = ({type, children}) => {

@@ -1,0 +1,86 @@
+@import "../../scss/mixins/variables.scss";
+@import "../../scss/functions/px-to-rem.scss";
+@import "../../scss/mixins/breakpoints.scss";
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: toRem(25) toRem(15);
+
+    @include breakpoint-above(md) {
+        padding: toRem(25) toRem(15) toRem(50) toRem(15);
+    }
+    
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: toRem(1) solid $neutral_grey;
+        margin-bottom: toRem(40);
+
+        @include breakpoint-above(md) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        @include breakpoint-above(lg) {
+            margin-bottom: 0;
+        }
+
+        &__tab {
+            position: relative;
+            font-size: toRem(16);
+            line-height: 1.5;
+            letter-spacing: toRem(0.01);
+            font-weight: 500;
+            color: $neutral_grey;
+            border-bottom: toRem(1) solid $neutral_grey;
+            padding: toRem(15) 0;
+            cursor: pointer;
+
+            @include breakpoint-above(md) {
+                padding: toRem(25) toRem(55);
+            }
+
+            &--active {
+                color: $dark_blue;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: block;
+                    width: 45%;
+                    height: toRem(4);
+                    background-color: $main_red;
+                    margin: 0 auto;
+
+                    @include breakpoint-above(md) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &:hover, &:focus {
+                color: $main_red;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint-above(lg) {
+            width: 100%;
+            height: toRem(495);
+        }
+    }
+}

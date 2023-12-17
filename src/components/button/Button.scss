@@ -24,6 +24,7 @@
     &--red {
         background-color: $main_red;
         border-color: $main_red;
+        padding: toRem(10) toRem(10);
 
         &:hover, &:focus {
             color: $main_red;

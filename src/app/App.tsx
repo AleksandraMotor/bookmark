@@ -8,8 +8,11 @@ import ilustrationHero from '../assets/ilustration/illustration-hero.svg';
 import Card from '../components/card/Card';
 import { CardData } from '../components/card/CardData';
 import Newsletter from '../components/newsletter/Newsletter';
+import Accordion from '../components/accordion/Accordion';
 
 import './App.scss';
+import Button from '../components/button/Button';
+import Features from '../components/features/Features';
 
 export default function App() {
     return (
@@ -22,11 +25,8 @@ export default function App() {
                     <NavigationDesktop/>
                 )}
             </header>
-            <section className={classNames({
-                'bookmark-app__intro': true,
-                'bookmark-app__intro--desktop': isDesktop
-            })}>
-                <img src={ilustrationHero} alt="Ilustration Hero" />
+            <section className='bookmark-app__intro'>
+                <img className='bookmark-app__intro__image' src={ilustrationHero} alt="Ilustration Hero" />
                 <Intro/>
             </section>
             <section className='bookmark-app__section'>
@@ -35,6 +35,7 @@ export default function App() {
                     Our aim is to make it quick and easy for you to access your favourite websites.
                     Your bookmarks sync between your devices so you can access them on the go.
                 </p>
+                <Features/>
             </section>
             <section className='bookmark-app__section'>
                 <h2 className='bookmark-app__section__title'>Download the extension</h2>
@@ -65,6 +66,10 @@ export default function App() {
                     Here are some of our FAQs.
                     If you have any other questions you'd like answered please feel free to email us.     
                 </p>
+                <Accordion/>
+                <div className='bookmark-app__section__button'>
+                    <Button>More Info</Button>
+                </div>
             </section>
             <footer className='bookmark-app__footer'>
                 <Newsletter/>

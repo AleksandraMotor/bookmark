@@ -6,7 +6,7 @@ import './Newsletter.scss';
 function Counter() {
     const[counter, setCounter] = React.useState(35000);
     React.useEffect(() => {
-        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+        counter > 0 && setTimeout(() => setCounter(counter - 7), 2);
     }, [counter]);
 
     let joined = Intl.NumberFormat("en-US").format(counter);
