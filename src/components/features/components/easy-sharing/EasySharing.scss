@@ -31,6 +31,7 @@
         flex-direction: column;
         align-items: center;
         max-width: toRem(450);
+        text-align: center;
 
         @include breakpoint-above(lg) {
             align-items: flex-start;

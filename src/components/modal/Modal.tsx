@@ -5,7 +5,7 @@ import './Modal.scss';
 const Modal: React.FC = () => {
 
     return (
-        <div className="modal">
+        <div className='modal'>
             <EasySharing/>
         </div>
     );

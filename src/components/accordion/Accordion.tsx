@@ -42,7 +42,7 @@ const Question: React.FC<QuestionProps> = ({ title, content }) => {
 
 const Accordion: React.FC = () => {
     return (
-        <div className="accordion">
+        <div className='accordion'>
             {AccordionData.map(( item, index ) => {
                 return (
                     <Question

@@ -54,7 +54,8 @@ export default function App() {
                     onMouseOver={handleOpen}
                     className='bookmark-app__intro__image'
                     src={ilustrationHero}
-                    alt="Ilustration Hero" />
+                    alt="Ilustration Hero"
+                />
                 <Intro/>
             </section>
             <section className='bookmark-app__section'>
