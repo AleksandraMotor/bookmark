@@ -57,6 +57,7 @@
             min-width: toRem(350);
             min-height: toRem(250);
             position: relative;
+            z-index: 1;
 
             img {
                 width: 100%;
